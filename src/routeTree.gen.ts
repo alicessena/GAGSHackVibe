@@ -9,38 +9,155 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as MapaRouteImport } from './routes/mapa'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as BuscarRouteImport } from './routes/buscar'
+import { Route as BibliotecaRouteImport } from './routes/biblioteca'
+import { Route as AgendamentoRouteImport } from './routes/agendamento'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProfissionalIdRouteImport } from './routes/profissional.$id'
 
+const MapaRoute = MapaRouteImport.update({
+  id: '/mapa',
+  path: '/mapa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuscarRoute = BuscarRouteImport.update({
+  id: '/buscar',
+  path: '/buscar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BibliotecaRoute = BibliotecaRouteImport.update({
+  id: '/biblioteca',
+  path: '/biblioteca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgendamentoRoute = AgendamentoRouteImport.update({
+  id: '/agendamento',
+  path: '/agendamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProfissionalIdRoute = ProfissionalIdRouteImport.update({
+  id: '/profissional/$id',
+  path: '/profissional/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agendamento': typeof AgendamentoRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/buscar': typeof BuscarRoute
+  '/dashboard': typeof DashboardRoute
+  '/mapa': typeof MapaRoute
+  '/profissional/$id': typeof ProfissionalIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agendamento': typeof AgendamentoRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/buscar': typeof BuscarRoute
+  '/dashboard': typeof DashboardRoute
+  '/mapa': typeof MapaRoute
+  '/profissional/$id': typeof ProfissionalIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agendamento': typeof AgendamentoRoute
+  '/biblioteca': typeof BibliotecaRoute
+  '/buscar': typeof BuscarRoute
+  '/dashboard': typeof DashboardRoute
+  '/mapa': typeof MapaRoute
+  '/profissional/$id': typeof ProfissionalIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/agendamento'
+    | '/biblioteca'
+    | '/buscar'
+    | '/dashboard'
+    | '/mapa'
+    | '/profissional/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/agendamento'
+    | '/biblioteca'
+    | '/buscar'
+    | '/dashboard'
+    | '/mapa'
+    | '/profissional/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/agendamento'
+    | '/biblioteca'
+    | '/buscar'
+    | '/dashboard'
+    | '/mapa'
+    | '/profissional/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgendamentoRoute: typeof AgendamentoRoute
+  BibliotecaRoute: typeof BibliotecaRoute
+  BuscarRoute: typeof BuscarRoute
+  DashboardRoute: typeof DashboardRoute
+  MapaRoute: typeof MapaRoute
+  ProfissionalIdRoute: typeof ProfissionalIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/mapa': {
+      id: '/mapa'
+      path: '/mapa'
+      fullPath: '/mapa'
+      preLoaderRoute: typeof MapaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buscar': {
+      id: '/buscar'
+      path: '/buscar'
+      fullPath: '/buscar'
+      preLoaderRoute: typeof BuscarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biblioteca': {
+      id: '/biblioteca'
+      path: '/biblioteca'
+      fullPath: '/biblioteca'
+      preLoaderRoute: typeof BibliotecaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agendamento': {
+      id: '/agendamento'
+      path: '/agendamento'
+      fullPath: '/agendamento'
+      preLoaderRoute: typeof AgendamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +165,24 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/profissional/$id': {
+      id: '/profissional/$id'
+      path: '/profissional/$id'
+      fullPath: '/profissional/$id'
+      preLoaderRoute: typeof ProfissionalIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgendamentoRoute: AgendamentoRoute,
+  BibliotecaRoute: BibliotecaRoute,
+  BuscarRoute: BuscarRoute,
+  DashboardRoute: DashboardRoute,
+  MapaRoute: MapaRoute,
+  ProfissionalIdRoute: ProfissionalIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

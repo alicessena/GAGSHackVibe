@@ -86,7 +86,7 @@ function Perfil() {
                   <div className="mt-4 flex flex-wrap gap-1.5">
                     {p.online && <span className="inline-flex items-center gap-1 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-semibold text-accent"><Video className="h-3 w-3"/> Online</span>}
                     {p.inPerson && <span className="inline-flex items-center gap-1 rounded-full bg-teal-soft px-2.5 py-1 text-xs font-semibold text-teal"><Stethoscope className="h-3 w-3"/> Presencial</span>}
-                    {p.badges.map((b) => <span key={b} className="rounded-full bg-primary-soft px-2.5 py-1 text-xs font-semibold text-primary">{b}</span>)}
+                    {p.badges.map((b: string) => <span key={b} className="rounded-full bg-primary-soft px-2.5 py-1 text-xs font-semibold text-primary">{b}</span>)}
                   </div>
                 </div>
                 <div className="col-span-2 flex gap-2 sm:col-span-1 sm:flex-col">
