@@ -77,19 +77,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Acolhe — Saúde com respeito para a comunidade LGBTQIAPN+" },
+      {
+        name: "description",
+        content:
+          "Encontre profissionais de saúde preparados para acolher a comunidade LGBTQIAPN+ com privacidade, respeito e cuidado integral.",
+      },
+      { name: "theme-color", content: "#6C63FF" },
+      { property: "og:title", content: "Acolhe — Saúde LGBTQIAPN+" },
+      {
+        property: "og:description",
+        content: "Plataforma de saúde acolhedora para a comunidade LGBTQIAPN+.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap",
       },
     ],
   }),
