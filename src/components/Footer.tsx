@@ -10,13 +10,13 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="md:col-span-1">
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-xl gradient-brand text-primary-foreground shadow-soft">
+            <span className="grid h-9 w-9 place-items-center rounded-xl gradient-pride text-primary-foreground shadow-soft">
               <Heart className="h-5 w-5" fill="currentColor" aria-hidden="true" />
             </span>
-            <span className="font-display text-lg font-bold">Acolhe</span>
+            <span className="font-display text-lg font-bold">GAG</span>
           </Link>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            Saúde com respeito, segurança e acolhimento para a comunidade LGBTQIAPN+.
+            Saúde afirmativa, segura e feita com a comunidade LGBTQIAPN+ no centro.
           </p>
           <div className="mt-5 flex gap-2">
             <a href="#" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-xl border border-border hover:bg-muted">
@@ -25,7 +25,7 @@ export function Footer() {
             <a href="#" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-xl border border-border hover:bg-muted">
               <Linkedin className="h-4 w-4" />
             </a>
-            <a href="mailto:ola@acolhe.app" aria-label="E-mail" className="grid h-10 w-10 place-items-center rounded-xl border border-border hover:bg-muted">
+            <a href="mailto:ola@gag.app" aria-label="E-mail" className="grid h-10 w-10 place-items-center rounded-xl border border-border hover:bg-muted">
               <Mail className="h-4 w-4" />
             </a>
           </div>
@@ -71,7 +71,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6 lg:px-8">
-          <p>© {new Date().getFullYear()} Acolhe Saúde. Feito com cuidado.</p>
+          <p>© {new Date().getFullYear()} GAG Saúde. Feito com orgulho e cuidado.</p>
           <ul className="flex gap-5">
             <li><a href="#" className="hover:text-foreground">Privacidade</a></li>
             <li><a href="#" className="hover:text-foreground">Termos</a></li>

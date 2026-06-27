@@ -18,11 +18,11 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="pride-bar h-1 w-full" aria-hidden="true" />
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2.5" aria-label="Acolhe — Página inicial">
-          <span className="grid h-9 w-9 place-items-center rounded-xl gradient-brand text-primary-foreground shadow-soft">
+        <Link to="/" className="flex items-center gap-2.5" aria-label="GAG — Página inicial">
+          <span className="grid h-9 w-9 place-items-center rounded-xl gradient-pride text-primary-foreground shadow-soft">
             <Heart className="h-5 w-5" aria-hidden="true" fill="currentColor" />
           </span>
-          <span className="font-display text-lg font-bold tracking-tight">Acolhe</span>
+          <span className="font-display text-lg font-bold tracking-tight">GAG</span>
         </Link>
 
         <nav aria-label="Navegação principal" className="hidden md:block">

@@ -77,17 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Acolhe — Saúde com respeito para a comunidade LGBTQIAPN+" },
+      { title: "GAG — Saúde com orgulho para a comunidade LGBTQIAPN+" },
       {
         name: "description",
         content:
-          "Encontre profissionais de saúde preparados para acolher a comunidade LGBTQIAPN+ com privacidade, respeito e cuidado integral.",
+          "Encontre profissionais de saúde preparados para atender a comunidade LGBTQIAPN+ com privacidade, respeito e cuidado afirmativo.",
       },
       { name: "theme-color", content: "#6C63FF" },
-      { property: "og:title", content: "Acolhe — Saúde LGBTQIAPN+" },
+      { property: "og:title", content: "GAG — Saúde LGBTQIAPN+" },
       {
         property: "og:description",
-        content: "Plataforma de saúde acolhedora para a comunidade LGBTQIAPN+.",
+        content: "Plataforma de saúde afirmativa para a comunidade LGBTQIAPN+.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -23,7 +23,7 @@ export const Route = createFileRoute("/profissional/$id")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.p.name} — Acolhe` },
+      { title: `${loaderData?.p.name} — GAG` },
       { name: "description", content: `${loaderData?.p.specialty}. ${loaderData?.p.pronoun}.` },
     ],
   }),

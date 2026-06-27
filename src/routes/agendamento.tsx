@@ -6,7 +6,7 @@ import { Check, ChevronLeft, ChevronRight, CalendarCheck, Video, Clock } from "l
 
 export const Route = createFileRoute("/agendamento")({
   head: () => ({
-    meta: [{ title: "Agendar consulta — Acolhe" }],
+    meta: [{ title: "Agendar consulta — GAG" }],
   }),
   component: Agendamento,
 });

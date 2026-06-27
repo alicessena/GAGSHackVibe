@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Calendar, Heart, FileText, Bell, BookOpen, Video, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/dashboard")({
-  head: () => ({ meta: [{ title: "Minha conta — Acolhe" }] }),
+  head: () => ({ meta: [{ title: "Minha conta — GAG" }] }),
   component: Dashboard,
 });
 

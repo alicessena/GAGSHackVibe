@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Building2, Cross, Brain, FlaskConical, Pill, Search, Navigation } from "lucide-react";
 
 export const Route = createFileRoute("/mapa")({
-  head: () => ({ meta: [{ title: "Mapa de serviços — Acolhe" }] }),
+  head: () => ({ meta: [{ title: "Mapa de serviços — GAG" }] }),
   component: Mapa,
 });
 
@@ -30,7 +30,7 @@ function Mapa() {
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h1 className="font-display text-3xl font-extrabold sm:text-4xl">Mapa de serviços</h1>
-            <p className="mt-1 text-muted-foreground">Encontre clínicas, hospitais, farmácias e laboratórios acolhedores perto de você.</p>
+            <p className="mt-1 text-muted-foreground">Encontre clínicas, hospitais, farmácias e laboratórios afirmativos para pessoas LGBTQIAPN+ perto de você.</p>
           </div>
           <label className="relative w-full sm:w-80">
             <span className="sr-only">Buscar local</span>

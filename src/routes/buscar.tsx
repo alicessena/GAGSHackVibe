@@ -9,7 +9,7 @@ import { useState } from "react";
 export const Route = createFileRoute("/buscar")({
   head: () => ({
     meta: [
-      { title: "Buscar profissionais — Acolhe" },
+      { title: "Buscar profissionais — GAG" },
       { name: "description", content: "Filtre por especialidade, cidade e atendimento inclusivo." },
     ],
   }),

@@ -183,6 +183,18 @@
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
 }
 
+@utility gradient-pride {
+  background: linear-gradient(
+    135deg,
+    var(--color-pride-red) 0%,
+    var(--color-pride-orange) 18%,
+    var(--color-pride-yellow) 34%,
+    var(--color-pride-green) 52%,
+    var(--color-pride-blue) 72%,
+    var(--color-pride-purple) 100%
+  );
+}
+
 @utility card-soft {
   background-color: var(--color-card);
   border-radius: 20px;

@@ -12,10 +12,11 @@ import {
   ArrowRight,
   Calendar,
   MapPin,
-  Sparkles,
   Lock,
   CheckCircle2,
   Star,
+  Rainbow,
+  UsersRound,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -25,11 +26,11 @@ import { professionals, articles } from "@/lib/mock-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Acolhe — Saúde LGBTQIAPN+ com respeito e segurança" },
+      { title: "GAG — Saúde LGBTQIAPN+ com orgulho, respeito e segurança" },
       {
         name: "description",
         content:
-          "Encontre profissionais de saúde preparados para acolher a comunidade LGBTQIAPN+. Atendimento online ou presencial, com privacidade e respeito.",
+          "Encontre profissionais de saúde preparados para atender a comunidade LGBTQIAPN+. Atendimento online ou presencial, com privacidade, respeito e cuidado afirmativo.",
       },
     ],
   }),
@@ -71,18 +72,19 @@ function Home() {
             <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-primary shadow-soft">
-                  <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-                  Plataforma de saúde acolhedora
+                  <Rainbow className="h-3.5 w-3.5" aria-hidden="true" />
+                  GAG · saúde afirmativa LGBTQIAPN+
                 </span>
                 <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-                  Saúde com respeito.{" "}
-                  <span className="bg-gradient-to-r from-primary via-accent to-teal bg-clip-text text-transparent">
-                    Cuidado de verdade.
+                  Cuidado para viver com{" "}
+                  <span className="bg-gradient-to-r from-pride-red via-pride-green to-pride-purple bg-clip-text text-transparent">
+                    orgulho e segurança.
                   </span>
                 </h1>
                 <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                  Encontre profissionais de saúde preparados para acolher a comunidade
-                  LGBTQIAPN+ com privacidade, escuta ativa e cuidado integral.
+                  A GAG conecta pessoas LGBTQIAPN+ a profissionais preparados para
+                  atender com privacidade, escuta ativa, linguagem respeitosa e cuidado
+                  afirmativo.
                 </p>
 
                 {/* Search */}
@@ -128,7 +130,7 @@ function Home() {
                 </form>
 
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {["Psicologia", "PrEP", "Hormonioterapia", "Ginecologia inclusiva"].map((t) => (
+                  {["Pessoas trans", "PrEP", "Hormonioterapia", "Saúde sexual sem tabu", "Nome social"].map((t) => (
                     <Link
                       key={t}
                       to="/buscar"
@@ -146,7 +148,7 @@ function Home() {
                   </li>
                   <li className="inline-flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-teal" aria-hidden="true" />
-                    Profissionais verificados
+                    Atendimento afirmativo
                   </li>
                   <li className="inline-flex items-center gap-2">
                     <Star className="h-4 w-4 text-warning" fill="currentColor" aria-hidden="true" />
@@ -157,12 +159,27 @@ function Home() {
 
               {/* Visual mock */}
               <div className="relative hidden lg:block" aria-hidden="true">
-                <div className="absolute -left-10 top-10 h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
-                <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-teal/20 blur-3xl" />
                 <div className="relative grid gap-4">
+                  <div className="card-soft overflow-hidden p-5">
+                    <div className="pride-bar h-3 rounded-full" />
+                    <div className="mt-5 flex items-start gap-4">
+                      <span className="grid h-12 w-12 place-items-center rounded-2xl gradient-pride text-white shadow-soft">
+                        <UsersRound className="h-6 w-6" />
+                      </span>
+                      <div>
+                        <p className="font-display text-xl font-extrabold">GAG</p>
+                        <p className="text-sm text-muted-foreground">Rede de cuidado LGBTQIAPN+</p>
+                      </div>
+                    </div>
+                    <div className="mt-5 grid grid-cols-3 gap-2 text-center text-xs font-bold">
+                      <span className="rounded-xl bg-primary-soft px-2 py-2 text-primary">Trans</span>
+                      <span className="rounded-xl bg-accent-soft px-2 py-2 text-accent">Bi+</span>
+                      <span className="rounded-xl bg-teal-soft px-2 py-2 text-teal">Queer</span>
+                    </div>
+                  </div>
                   <div className="card-soft ml-auto w-72 p-4">
                     <div className="flex items-center gap-3">
-                      <div className="h-12 w-12 rounded-2xl" style={{ background: "linear-gradient(135deg,#6C63FF,#3B82F6)" }} />
+                      <div className="h-12 w-12 rounded-2xl gradient-pride" />
                       <div>
                         <p className="text-sm font-bold">Dra. Ana Ribeiro</p>
                         <p className="text-xs text-muted-foreground">Psicologia · ela/dela</p>
@@ -179,17 +196,17 @@ function Home() {
                     <p className="text-sm text-muted-foreground">Teleconsulta · 30 min</p>
                     <div className="mt-4 flex items-center justify-between">
                       <div className="flex -space-x-2">
-                        <div className="h-7 w-7 rounded-full ring-2 ring-card" style={{ background: "linear-gradient(135deg,#14B8A6,#3B82F6)" }} />
-                        <div className="h-7 w-7 rounded-full ring-2 ring-card" style={{ background: "linear-gradient(135deg,#6C63FF,#EC4899)" }} />
+                        <div className="h-7 w-7 rounded-full bg-pride-blue ring-2 ring-card" />
+                        <div className="h-7 w-7 rounded-full bg-pride-purple ring-2 ring-card" />
                       </div>
-                      <span className="rounded-full gradient-brand px-3 py-1 text-xs font-semibold text-primary-foreground">Confirmada</span>
+                      <span className="rounded-full gradient-pride px-3 py-1 text-xs font-semibold text-primary-foreground">Confirmada</span>
                     </div>
                   </div>
                   <div className="card-soft ml-12 w-72 p-4">
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Índice de inclusão</p>
                     <p className="mt-1 font-display text-3xl font-extrabold text-primary">98<span className="text-base text-muted-foreground">/100</span></p>
                     <div className="mt-3 h-2 rounded-full bg-muted">
-                      <div className="h-full w-[98%] rounded-full gradient-brand" />
+                      <div className="h-full w-[98%] rounded-full gradient-pride" />
                     </div>
                   </div>
                 </div>
@@ -204,7 +221,7 @@ function Home() {
             <div>
               <h2 className="font-display text-3xl font-bold sm:text-4xl">Especialidades</h2>
               <p className="mt-2 text-muted-foreground">
-                Profissionais com formação e experiência para acolher você.
+                Profissionais com formação e experiência para acolher pessoas LGBTQIAPN+.
               </p>
             </div>
             <Link to="/buscar" className="hidden text-sm font-semibold text-primary hover:underline sm:inline-flex sm:items-center sm:gap-1">
@@ -240,21 +257,21 @@ function Home() {
             <QuickAction
               icon={<Calendar className="h-5 w-5" />}
               title="Agendar consulta"
-              desc="Encontre um horário em minutos."
+              desc="Cuidado afirmativo em minutos."
               to="/agendamento"
               tone="primary"
             />
             <QuickAction
               icon={<MapPin className="h-5 w-5" />}
               title="Mapa de serviços"
-              desc="Clínicas, farmácias e laboratórios."
+              desc="Locais seguros para a comunidade."
               to="/mapa"
               tone="accent"
             />
             <QuickAction
               icon={<ShieldCheck className="h-5 w-5" />}
               title="PrEP e PEP"
-              desc="Prevenção combinada perto de você."
+              desc="Prevenção sem julgamento."
               to="/biblioteca"
               tone="teal"
             />
@@ -267,7 +284,7 @@ function Home() {
             <div>
               <h2 className="font-display text-3xl font-bold sm:text-4xl">Profissionais recomendados</h2>
               <p className="mt-2 text-muted-foreground">
-                Curadoria com base em avaliações e Índice de Inclusão.
+                Curadoria com base em avaliações, pronomes respeitados e Índice de Inclusão.
               </p>
             </div>
             <Link to="/buscar" className="hidden text-sm font-semibold text-primary hover:underline sm:inline-flex sm:items-center sm:gap-1">
@@ -321,10 +338,10 @@ function Home() {
             <div className="grid items-center gap-8 md:grid-cols-[1.5fr_1fr]">
               <div>
                 <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl">
-                  Cuidar de você é um ato de coragem. Estamos com você.
+                  GAG está com você em cada etapa do cuidado.
                 </h2>
                 <p className="mt-3 max-w-2xl text-base text-primary-foreground/90">
-                  Encontre profissionais que respeitam sua identidade, seu corpo e sua história — onde quer que você esteja.
+                  Encontre profissionais que respeitam sua identidade, seu corpo, seus pronomes e sua história — onde quer que você esteja.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 md:justify-end">

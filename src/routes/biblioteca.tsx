@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Search } from "lucide-react";
 
 export const Route = createFileRoute("/biblioteca")({
-  head: () => ({ meta: [{ title: "Biblioteca de saúde — Acolhe" }] }),
+  head: () => ({ meta: [{ title: "Biblioteca de saúde — GAG" }] }),
   component: Biblioteca,
 });
 
@@ -46,7 +46,7 @@ function Biblioteca() {
         <header>
           <h1 className="font-display text-3xl font-extrabold sm:text-4xl">Biblioteca de saúde</h1>
           <p className="mt-2 max-w-2xl text-muted-foreground">
-            Conteúdo confiável sobre saúde LGBTQIAPN+, revisado por profissionais da rede Acolhe.
+            Conteúdo confiável sobre saúde LGBTQIAPN+, revisado por profissionais da rede GAG.
           </p>
 
           <label className="relative mt-6 block max-w-xl">
